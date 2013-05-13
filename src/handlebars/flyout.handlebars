@@ -1,0 +1,27 @@
+<div id="flyout">
+  <div class="flyout-bar">
+    <a id="flyout_toggle" class="toggle hidden-desktop" href="#">
+      <i class="icon-reorder"></i>
+    </a>
+    <div id="flyout_bar_container" class="container clearfix">
+      <ul class="nav nav-desktop pull-left visible-desktop">
+        {{#each navigation}}
+        <li class="{{#if this.active}}active{{/if}}">
+          <a href="{{ this.href }}">{{ this.title }}</a>
+        </li>
+        {{/each}}
+      </ul>
+      {{ search }}
+    </div>
+  </div>
+  <div class="container-flyout">
+    <ul class="nav nav-list">
+      <li class="nav-header">Pages</li>
+      {{#each navigation}}
+      <li class="{{#if this.active}}active{{/if}}">
+        <a href="{{ this.href }}">{{ this.title }}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
