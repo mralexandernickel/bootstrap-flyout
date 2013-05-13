@@ -1,0 +1,12 @@
+[submodule "src/lib/bootstrap"]
+	path = src/lib/bootstrap
+	url = git://github.com/twitter/bootstrap.git
+[submodule "src/lib/font-awesome"]
+	path = src/lib/font-awesome
+	url = git://github.com/FortAwesome/Font-Awesome.git
+[submodule "src/lib/less-easing"]
+	path = src/lib/less-easing
+	url = git://github.com/mralexandernickel/less-easing.git
+[submodule "src/lib/handlebars.js"]
+	path = src/lib/handlebars.js
+	url = git://github.com/wycats/handlebars.js.git
