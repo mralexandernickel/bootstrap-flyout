@@ -63,8 +63,12 @@
     },
     inject_flyout: function() {
       if (!($("#flyout").length > 0)) {
-        return config.container.prepend(Handlebars.templates["flyout"](config.context));
+        config.container.prepend(Handlebars.templates["flyout"](config.context));
       }
+      return $("#flyout_toggle").click(function(e) {
+        e.preventDefault();
+        return $("#flyout").toggleClass("open");
+      });
     }
   };
 

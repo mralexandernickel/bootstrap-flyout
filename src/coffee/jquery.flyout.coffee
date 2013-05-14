@@ -39,6 +39,9 @@ methods =
     unless $("#flyout").length > 0    
       # inject precompiled handlebars template into DOM
       config.container.prepend Handlebars.templates["flyout"](config.context)
+    $("#flyout_toggle").click (e) ->
+     e.preventDefault()
+     $("#flyout").toggleClass "open"
 
 
 $.flyout = (method,options...) ->
