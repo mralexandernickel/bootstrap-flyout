@@ -62,11 +62,22 @@
       }
     },
     inject_flyout: function() {
-      config.container.prepend(Handlebars.templates["flyout"](config.context));
-      return $("#flyout_toggle").click(function(e) {
-        e.preventDefault();
-        return $("#flyout").toggleClass("open");
-      });
+      if (!($("#flyout").length > 0)) {
+        return $.getScript("assets/lib/handlebars.js/handlebars.runtime.js", function() {
+          return $.getScript("assets/js/templates.js", function() {
+            config.container.prepend(Handlebars.templates["flyout"](config.context));
+            return $("#flyout_toggle").click(function(e) {
+              e.preventDefault();
+              return $("#flyout").toggleClass("open");
+            });
+          });
+        });
+      } else {
+        return $("#flyout_toggle").click(function(e) {
+          e.preventDefault();
+          return $("#flyout").toggleClass("open");
+        });
+      }
     }
   };
 
