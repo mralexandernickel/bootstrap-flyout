@@ -9053,12 +9053,14 @@ html,
 body {
   overflow-x: hidden;
 }
-html.positionfixed #flyout,
-body.positionfixed #flyout {
+html.positionfixed.no-appleios #flyout,
+body.positionfixed.no-appleios #flyout {
   position: fixed;
 }
 html.no-positionfixed,
-body.no-positionfixed {
+body.no-positionfixed,
+html.appleios,
+body.appleios {
   position: absolute;
   top: 0;
   right: 0;
@@ -9066,11 +9068,15 @@ body.no-positionfixed {
   left: 0;
 }
 html.no-positionfixed #flyout,
-body.no-positionfixed #flyout {
+body.no-positionfixed #flyout,
+html.appleios #flyout,
+body.appleios #flyout {
   position: absolute;
 }
 html.no-positionfixed #main,
-body.no-positionfixed #main {
+body.no-positionfixed #main,
+html.appleios #main,
+body.appleios #main {
   position: absolute;
   z-index: 1;
   top: 0;

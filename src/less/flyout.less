@@ -160,12 +160,12 @@
 html, body {
   overflow-x: hidden;
   
-  &.positionfixed {
+  &.positionfixed.no-appleios {
     #flyout {
       position: fixed;
     }
   }
-  &.no-positionfixed {
+  &.no-positionfixed, &.appleios {
     position: absolute;
     top: 0;
     right: 0;
